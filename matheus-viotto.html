@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matheus Viotto — Portfólio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* Só o essencial que o Bootstrap não resolve sozinho */
+
+  html{
+    scroll-behavior:smooth;
+    /* Compensa a navbar fixa: o título da seção não fica escondido atrás dela */
+    scroll-padding-top:70px;
+  }
+
+  body{
+    font-family:'Karla', sans-serif;
+  }
+  h1, h2, h3, .navbar-brand{
+    font-family:'Fraunces', serif;
+  }
+
+  /* Avatar redondo das redes sociais (o Bootstrap não tem tamanho fixo pronto) */
+  .avatar{
+    width:42px;
+    height:42px;
+    font-weight:600;
+  }
+
+  /* Efeito de hover nos cards: muda a cor da borda ao passar o mouse */
+  .hover-card{
+    transition:border-color .15s ease;
+  }
+  .hover-card:hover{
+    border-color:var(--bs-primary) !important;
+  }
+
+  /* Destaque do item de menu ativo (controlado pelo Scrollspy do Bootstrap) */
+  .navbar-nav .nav-link.active{
+    color:var(--bs-primary) !important;
+    font-weight:600;
+  }
+</style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navMenu" data-bs-offset="120" tabindex="0">
+
+<nav class="navbar navbar-dark bg-dark border-bottom border-secondary-subtle fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-semibold" href="#inicio">Matheus Viotto</a>
+    <a href="../AgroVision/index.html#desenvolvedores" class="btn btn-outline-light btn-sm ms-auto me-2 d-none d-sm-inline-block">← Voltar ao Agrovision</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu" aria-label="Abrir menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Menu lateral (Offcanvas do Bootstrap) -->
+<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="menu" style="width:230px;">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Os links NÃO usam data-bs-dismiss: o script no final da página fecha o menu e depois rola até a seção -->
+    <ul class="navbar-nav" id="navMenu">
+      <li class="nav-item d-sm-none"><a class="nav-link text-primary" href="../AgroVision/index.html#desenvolvedores">← Voltar ao Agrovision</a></li>
+      <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+      <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+      <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#certificados">Certificados</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      <li class="nav-item"><a class="nav-link" href="#social">Redes sociais</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Início -->
+<section id="inicio" class="d-flex align-items-center" style="min-height:88vh;">
+  <div class="container">
+    <p class="text-primary fw-semibold mb-1">Olá, eu sou</p>
+    <h1 class="display-4 fw-semibold">Matheus <span class="text-primary">Viotto</span></h1>
+    <p class="lead text-secondary mt-3" style="max-width:32rem;">
+      Estudante de Análise e Desenvolvimento de Sistemas, com foco em
+      programação e tecnologia.
+    </p>
+    <div class="mt-4 d-flex gap-3 flex-wrap">
+      <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+      <a href="#sobre" class="btn btn-outline-light">Sobre mim</a>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre mim -->
+<section id="sobre" class="py-5">
+  <div class="container">
+    <h2 class="pb-2 mb-4 border-bottom border-secondary-subtle">Sobre mim</h2>
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <h3 class="h5">Matheus Henrique Viotto Vitor</h3>
+        <p class="text-secondary">
+          Sou estudante da área de tecnologia, atualmente cursando Análise e
+          Desenvolvimento de Sistemas (ADS), e venho me especializando com
+          cursos complementares em programação e tecnologia.
+        </p>
+      </div>
+      <div class="col-lg-7">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-transparent d-flex justify-content-between">
+            <span class="text-secondary">Análise e Desenvolvimento de Sistemas</span>
+            <span>Cursando</span>
+          </li>
+          <li class="list-group-item bg-transparent d-flex justify-content-between">
+            <span class="text-secondary">Técnico em ADS</span>
+            <span>Concluído</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Habilidades -->
+<section id="habilidades" class="py-5 bg-body-secondary border-top border-bottom border-secondary-subtle">
+  <div class="container">
+    <h2 class="pb-2 mb-4 border-bottom border-secondary-subtle">Minhas habilidades</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Desenvolvimento Web</h3>
+            <p class="text-secondary small">Criação e estruturação de páginas web utilizando HTML, CSS e Bootstrap.</p>
+            <span class="badge text-bg-secondary me-1">HTML</span>
+            <span class="badge text-bg-secondary me-1">CSS</span>
+            <span class="badge text-bg-secondary">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Lógica e Programação</h3>
+            <p class="text-secondary small mb-0">Fundamentos de lógica de programação e desenvolvimento de soluções estudados durante o curso de ADS.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Análise de Dados</h3>
+            <p class="text-secondary small mb-0">Conhecimentos acadêmicos em estatística, organização, análise e interpretação de dados.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Edição de Vídeo</h3>
+            <p class="text-secondary small mb-0">Experiência com edição de vídeos, montagem de cenas e desenvolvimento de conteúdo audiovisual.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Criação Audiovisual</h3>
+            <p class="text-secondary small mb-0">Planejamento de cenas, storyboards, enquadramentos e narrativa visual.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projetos -->
+<section id="projetos" class="py-5">
+  <div class="container">
+    <h2 class="pb-2 mb-4 border-bottom border-secondary-subtle">Meus projetos</h2>
+
+    <!-- Projeto em destaque -->
+    <div class="card text-bg-dark border-primary mb-4">
+      <div class="card-body p-4">
+        <p class="text-primary fw-semibold small mb-2">★ Projeto em destaque</p>
+        <h3 class="h5">Sanctus App — Food Truck Manager</h3>
+        <p class="text-secondary">
+          Sistema de gerenciamento para food truck, com tela de login e
+          conexão a banco de dados MySQL. Desenvolvido em C# com .NET,
+          cobrindo o controle de pedidos e o back-end de dados do negócio.
+        </p>
+        <span class="badge text-bg-secondary me-1">C#</span>
+        <span class="badge text-bg-secondary me-1">.NET</span>
+        <span class="badge text-bg-secondary">MySQL</span>
+        <div class="mt-3">
+          <a href="https://github.com/matheushvitor10/SanctusApp" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Ver no GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Página Web</h3>
+            <p class="text-secondary small">Página criada utilizando HTML e componentes do Bootstrap.</p>
+            <span class="badge text-bg-secondary me-1">HTML</span>
+            <span class="badge text-bg-secondary">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Projeto Acadêmico</h3>
+            <p class="text-secondary small">Projeto desenvolvido durante meus estudos na faculdade.</p>
+            <span class="badge text-bg-secondary me-1">HTML</span>
+            <span class="badge text-bg-secondary">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Portfólio</h3>
+            <p class="text-secondary small">Meu portfólio pessoal criado utilizando HTML e Bootstrap.</p>
+            <span class="badge text-bg-secondary me-1">HTML</span>
+            <span class="badge text-bg-secondary">Bootstrap</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Animatrix v2</h3>
+            <p class="text-secondary small">Site do Animatrix, desenvolvido em JavaScript.</p>
+            <span class="badge text-bg-secondary mb-2">JavaScript</span>
+            <div>
+              <a href="https://github.com/matheushvitor10/animatrix-v2" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">Dashboard Industrial SCADA</h3>
+            <p class="text-secondary small">Painel de monitoramento com conceitos de sistemas SCADA para ambientes industriais.</p>
+            <a href="https://github.com/matheushvitor10/Dashboard-Industrial-SCADA" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Ver no GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100 hover-card">
+          <div class="card-body">
+            <h3 class="h6">RPG</h3>
+            <p class="text-secondary small">Projeto de jogo em estilo RPG desenvolvido em JavaScript.</p>
+            <span class="badge text-bg-secondary mb-2">JavaScript</span>
+            <div>
+              <a href="https://github.com/matheushvitor10/RPG" target="_blank" rel="noopener" class="btn btn-outline-light btn-sm">Ver no GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificados -->
+<section id="certificados" class="py-5">
+  <div class="container">
+    <h2 class="pb-2 mb-2 border-bottom border-secondary-subtle">Certificados</h2>
+    <p class="text-secondary mb-4">
+      Cursos autoinstrucionais concluídos pela Fundação Bradesco | Escola Virtual.
+    </p>
+
+    <ul class="list-group">
+
+      <li class="list-group-item text-bg-dark border-secondary-subtle border-start border-4 border-start-primary d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <div class="fw-bold">AI-900 — Fundamentos de IA no Azure</div>
+          <div class="text-secondary small">Microsoft · Fundação Bradesco | Escola Virtual · 16h</div>
+        </div>
+        <span class="text-primary fw-semibold small">Jun/2026</span>
+      </li>
+
+      <li class="list-group-item text-bg-dark border-secondary-subtle border-start border-4 border-start-primary d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <div class="fw-bold">Desenvolvendo Aplicações Mobile com Android Studio</div>
+          <div class="text-secondary small">Fundação Bradesco | Escola Virtual · 15h</div>
+        </div>
+        <span class="text-primary fw-semibold small">Mai/2026</span>
+      </li>
+
+      <li class="list-group-item text-bg-dark border-secondary-subtle border-start border-4 border-start-primary d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <div class="fw-bold">Linguagem de Programação Python — Básico</div>
+          <div class="text-secondary small">Fundação Bradesco | Escola Virtual · 18h</div>
+        </div>
+        <span class="text-primary fw-semibold small">Ago/2026</span>
+      </li>
+
+      <li class="list-group-item text-bg-dark border-secondary-subtle border-start border-4 border-start-primary d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <div class="fw-bold">Linguagem de Programação Python — Básico</div>
+          <div class="text-secondary small">Fundação Bradesco | Escola Virtual · 18h</div>
+        </div>
+        <span class="text-primary fw-semibold small">Mai/2026</span>
+      </li>
+
+      <li class="list-group-item text-bg-dark border-secondary-subtle border-start border-4 border-start-primary d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <div class="fw-bold">Projetos de Sistemas de TI</div>
+          <div class="text-secondary small">Fundação Bradesco | Escola Virtual · 15h</div>
+        </div>
+        <span class="text-primary fw-semibold small">Mar/2026</span>
+      </li>
+
+      <li class="list-group-item text-bg-dark border-secondary-subtle border-start border-4 border-start-primary d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <div class="fw-bold">Microsoft Word 2016 — Intermediário</div>
+          <div class="text-secondary small">Fundação Bradesco | Escola Virtual · 12h</div>
+        </div>
+        <span class="text-primary fw-semibold small">Set/2026</span>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+<!-- Contato -->
+<section id="contato" class="py-5 bg-body-secondary border-top border-bottom border-secondary-subtle">
+  <div class="container">
+    <h2 class="pb-2 mb-4 border-bottom border-secondary-subtle">Contato</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-5">
+        <div class="card text-bg-dark border-secondary-subtle text-center h-100">
+          <div class="card-body">
+            <p class="text-secondary small mb-1">E-mail</p>
+            <h3 class="h6">matheushvitor10@gmail.com</h3>
+            <a href="mailto:matheushvitor10@gmail.com" class="btn btn-primary mt-2">Enviar e-mail</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="card text-bg-dark border-secondary-subtle text-center h-100">
+          <div class="card-body">
+            <p class="text-secondary small mb-1">Telefone</p>
+            <h3 class="h6">(16) 99248-0357</h3>
+            <a href="tel:+5516992480357" class="btn btn-outline-light mt-2">Ligar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Redes sociais -->
+<section id="social" class="py-5">
+  <div class="container">
+    <h2 class="pb-2 mb-4 border-bottom border-secondary-subtle text-center">Redes sociais</h2>
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-5 col-lg-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="avatar rounded-circle bg-primary text-white d-flex align-items-center justify-content-center">MV</div>
+              <div>
+                <div class="fw-bold">@matheusviottoo</div>
+                <div class="text-secondary small">Instagram</div>
+              </div>
+            </div>
+            <div class="row row-cols-3 g-2 mb-3">
+              <div class="col"><div class="ratio ratio-1x1 bg-secondary-subtle rounded"></div></div>
+              <div class="col"><div class="ratio ratio-1x1 bg-secondary-subtle rounded"></div></div>
+              <div class="col"><div class="ratio ratio-1x1 bg-secondary-subtle rounded"></div></div>
+            </div>
+            <a href="https://instagram.com/matheusviottoo" target="_blank" rel="noopener" class="btn btn-outline-light w-100">Seguir no Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5 col-lg-4">
+        <div class="card text-bg-dark border-secondary-subtle h-100">
+          <div class="card-body">
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="avatar rounded-circle bg-primary text-white d-flex align-items-center justify-content-center">in</div>
+              <div>
+                <div class="fw-bold">Matheus Viotto</div>
+                <div class="text-secondary small">LinkedIn</div>
+              </div>
+            </div>
+            <p class="text-secondary small" style="min-height:2.5rem;">Trajetória profissional, formação e conexões.</p>
+            <a href="https://www.linkedin.com/in/matheus-viotto-a6775b25b/" target="_blank" rel="noopener" class="btn btn-outline-light w-100">Ver perfil</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="text-center text-secondary py-4 small">
+  <p class="mb-0">© 2026 Matheus Henrique Viotto Vitor</p>
+</footer>
+
+<!-- JavaScript do Bootstrap: necessário para o Offcanvas (menu lateral) e o Scrollspy -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Ao clicar num link do menu lateral: fecha o offcanvas e,
+  // depois que ele terminar de fechar, rola até a seção escolhida.
+  const menu = document.getElementById('menu');
+
+  menu.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const destino = link.getAttribute('href');
+
+      menu.addEventListener('hidden.bs.offcanvas', () => {
+        document.querySelector(destino)?.scrollIntoView();
+        history.replaceState(null, '', destino);
+      }, { once: true });
+
+      bootstrap.Offcanvas.getOrCreateInstance(menu).hide();
+    });
+  });
+</script>
+
+</body>
+</html>
